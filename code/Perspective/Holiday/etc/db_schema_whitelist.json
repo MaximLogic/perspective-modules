@@ -1,0 +1,15 @@
+{
+    "perspective_holidays": {
+        "column": {
+            "holiday_id": true,
+            "holiday": true,
+            "status": true,
+            "start": true,
+            "day": true,
+            "end": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

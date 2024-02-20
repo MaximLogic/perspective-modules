@@ -1,0 +1,15 @@
+<?php
+/** @var \Perspective\Holiday\Block\Template $block */
+
+$viewModel = $block->getViewModel();
+
+if($viewModel->isEnabled() && !is_null($viewModel->getHolidayCustomerGroups()))
+{
+    $holidayCustomerGroups = explode(',', $viewModel->getHolidayCustomerGroups());
+    if(in_array($viewModel->getCurrentCustomerGroupId(), $holidayCustomerGroups) && $block->getProduct()->getHoliday() == 1)
+    {
+        echo "<b>";
+        echo "Price with Discount " . $viewModel->getHolidayDiscount() . "% " . $block->getProduct()->getFinalPrice();
+        echo "</b>";
+    }
+}

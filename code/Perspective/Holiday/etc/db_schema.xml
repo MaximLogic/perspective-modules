@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="perspective_holidays" resource="default" engine="innodb" comment="Holidays table">
+        <column xsi:type="int" name="holiday_id" padding="11" unsigned="false" nullable="false" identity="true" comment="Id"/>
+        <column xsi:type="varchar" name="holiday" length="63" nullable="false" comment="Holiday"/>
+        <column xsi:type="varchar" name="greeting" length="127" nullable="false" comment="Holiday text"/>
+        <column xsi:type="boolean" name="status" nullable="false" comment="Status"/>
+        <column xsi:type="date" name="start" nullable="false" comment="Start Holiday"/>
+        <column xsi:type="date" name="day" nullable="false" comment="Day of Holiday"/>
+        <column xsi:type="date" name="end" nullable="false" comment="End Holiday"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="holiday_id"/>
+        </constraint>
+    </table>
+</schema>

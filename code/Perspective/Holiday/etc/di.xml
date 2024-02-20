@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="perspective_holiday_holiday_listing_data_source" xsi:type="string">Perspective\Holiday\Model\ResourceModel\Holiday\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Perspective\Holiday\Model\ResourceModel\Holiday\Collection"
+    type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">perspective_holidays</argument>
+            <argument name="resourceModel" xsi:type="string">Perspective\Holiday\Model\ResourceModel\Holiday</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="holiday-product-model" type="Perspective\Holiday\Plugin\ProductPlugin" sortOrder="10" />
+    </type>
+</config>
