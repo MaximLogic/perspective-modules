@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <container name="under.breadcrumbs" htmlTag="div" htmlClass="under-breadcrumbs" before="-"/>
+        </referenceContainer>
+    </body>
+    <move element="product.info.stock.sku" destination="under.breadcrumbs" as="product.info.stock.sku"/>
+    <move element="page.main.title" destination="under.breadcrumbs" as="page.main.title"/>
+</page>
