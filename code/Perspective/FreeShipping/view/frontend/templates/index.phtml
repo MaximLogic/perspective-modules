@@ -1,0 +1,11 @@
+<?php
+/** @var \Perspective\Holiday\Block\Template $block */
+
+    $viewModel = $block->getViewModel();
+
+    $freeShipping = $viewModel->isShippingFree();
+    echo "<b>";
+    if($freeShipping === true) echo "Shipping is free";
+    else if(!is_bool($freeShipping)) echo "Add products on sum " . ($freeShipping) . "$ to get Free shipping";
+    echo "</b>";
+?>

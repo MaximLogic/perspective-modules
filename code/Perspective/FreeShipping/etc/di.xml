@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Quote\Model\Quote\Address\Rate">
+        <plugin name="Perspective_MakeShippingRateFree"
+                type="Perspective\FreeShipping\Plugin\Quote\Model\Quote\Address\RatePlugin" sortOrder="10"/>
+    </type>
+</config>
