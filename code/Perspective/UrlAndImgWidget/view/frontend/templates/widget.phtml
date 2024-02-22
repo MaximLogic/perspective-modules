@@ -1,0 +1,18 @@
+<?php
+/** @var \Perspective\UrlAndImgWidget\Block\WidgetBlock $block */
+    $productUrls = $block->getProductImageAndUrlBySku($block->getData('sku'));
+    if($productUrls !== null)
+    {
+        $productImg = $productUrls[0];
+        $productUrl = $productUrls[1];
+        $widgetText = $block->getData('text');
+
+        echo "<h2>$widgetText</h2>";
+        echo "<img src='$productImg' style='height: 200px'><br>";
+        echo "<a href='$productUrl'>Product link</a>";
+    }
+    else
+    {
+        echo "<h2>Incorrect SKU</h2>";
+    }
+?>

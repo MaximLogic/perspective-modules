@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="perspective_widget" class="Perspective\UrlAndImgWidget\Block\WidgetBlock">
+        <label>Url and Img Widget</label>
+        <description>Widget show Url and Image of product by his SKU</description>
+        <parameters>
+            <parameter name="sku" xsi:type="text" required="true" visible="true" sort_order="10">
+                <label>Product SKU</label>
+            </parameter>
+            <parameter name="text" xsi:type="text" required="true" visible="true" sort_order="20">
+                <label>Sample text</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
